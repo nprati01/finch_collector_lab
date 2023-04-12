@@ -1,11 +1,6 @@
 from django.shortcuts import render
+from .models import Finch
 
-finches = [
-  {'species': 'Evening Grosbeak', 'description': 'yellow and black', 'habitat': 'Northern and montane forests', 'note':'the Evening Grosbeak does not have a complex song, but rather draws from a collection of sweet, piercing notes and burry chirps.'},
-  {'species': 'Pine Grosbeak', 'description': 'red and black', 'habitat': 'Open boreal forest', 'note':'Locals in Newfoundland affectionately call Pine Grosbeaks mopes because they can be so tame and slow moving.'},
-  {'species': 'Common Redpoll', 'description': 'red white and black', 'habitat': 'Sub-Arctic forests and tundra ', 'note':'Common Redpolls sometimes escape the cold of winter nights by burrowing into snow.'},
-
-]
 
 
 # Create your views here.
@@ -16,4 +11,9 @@ def about(request):
   return render(request, 'about.html')
 
 def finches_index(request):
+   finches = Finch.objects.all()
    return render(request, 'finches/index.html', {'finches': finches})
+
+def finches_detail(request, finch_id):
+  finch = Finch.objects.get(id=finch_id)
+  return render(request, 'finches/detail.html', { 'finch': finch })
