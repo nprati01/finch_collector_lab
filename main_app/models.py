@@ -7,12 +7,20 @@ MEALS = (
     ('L', 'Lunch'),
     ('D', 'Dinner')
 )
+class Toy(models.Model):
+    name = models.CharField(max_length=50)
+    color = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
 # Create your models here.
 class Finch(models.Model):
     species = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     habitat = models.CharField(max_length=300)
     note = models.CharField(max_length=750)
+    toys = models.ManyToManyField(Toy)
 
     def __str__(self):
         return self.species
