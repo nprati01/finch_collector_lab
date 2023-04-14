@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
+
 
 </head>
 <body>
@@ -17,7 +17,7 @@
     <nav>
       <div class="nav-wrapper">
         <ul>
-          <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Finch Collector</a></li>
+          <li><img src="main_app/images/bird-watching.jpg"><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Finch Collector</a></li>
         </ul>
         <ul class="right">
           <li><a href="{% url 'about' %}">About</a></li>
@@ -30,6 +30,7 @@
   </header>
   <main class="container">
     {% block content %}
+
     {% endblock %}
   </main>
   <footer class="page-footer">

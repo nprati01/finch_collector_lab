@@ -1,17 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+
+
+
+
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Cinzel', serif;
+  }
+  .nav-wrapper{
+    background-color:#3279a8;
   }
 
   main {
     flex: 1 0 auto;
   }
-  nav{
-    background-color: aqua;
-  }
+
+h1{
+  font-family:'DM Serif Display', serif;
+}
+p{
+  font-family:'Cinzel', serif;
+  font-weight: 400;
+}
 
   footer.page-footer {
     padding-top: 0;
     text-align: right;
+    background-color:#3279a8;
   }
