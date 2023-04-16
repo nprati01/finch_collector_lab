@@ -1,9 +1,17 @@
+
 {% extends 'base.html' %}
+
+
+
 {% block content %}
 
 
+
     <h1>About the Finch Collector</h1>
+
 <hr>
 <p>Hire the Finch Collector!</p>
+{% load static %}
+<img src="{% static 'main_app/home_image.jpg' %}" alt="home_image">
 
 {% endblock %}
